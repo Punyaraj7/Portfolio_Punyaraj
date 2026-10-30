@@ -19,14 +19,13 @@ var FINE = typeof matchMedia === "function" && matchMedia("(pointer: fine)").mat
 var SECTIONS = [
   { id: "top", label: "Home" },
   { id: "work", label: "Work" },
-  { id: "powerbi", label: "Power BI" },
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
   { id: "education", label: "Education" },
   { id: "certifications", label: "Certifications" },
   { id: "contact", label: "Contact" }
 ];
-var NAV = ["work", "powerbi", "skills", "experience", "education", "certifications", "contact"];
+var NAV = ["work", "skills", "experience", "education", "certifications", "contact"];
 
 var TYPED = [
   "building Power BI reports on live API data",
@@ -1287,7 +1286,6 @@ function App() {
     <main>
       <${Hero} ready=${ready} theme=${theme} reduced=${reduced} three=${three} onResume=${onResume} />
       <${Work} onOpen=${setProject} reduced=${reduced} />
-      <${Dashboard} reduced=${reduced} />
       <${Skills} />
       <${Timeline} id="experience" title="Experience" lead="What I’ve shipped as a data analyst apprentice at Idox Group." items=${EXPERIENCE} openFirst=${true} />
       <${Timeline} id="education" title="Education" lead="My degrees, most recent first." items=${EDUCATION} />
